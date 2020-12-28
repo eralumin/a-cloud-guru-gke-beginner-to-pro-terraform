@@ -7,11 +7,16 @@ variable "billing_account" {
 }
 
 variable "region" {
-    type = string
-    default = "us-central1"
+  type    = string
+  default = "us-central1"
 }
 
 variable "zone" {
-    type = string
-    default = "us-central1-c"
+  type    = string
+  default = "us-central1-c"
+}
+
+variable "services" {
+  type    = list
+  default = ["container.googleapis.com"]
 }
