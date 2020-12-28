@@ -3,6 +3,10 @@ variable "region" {
 }
 
 variable "lab_name" {
-  type = string
+  type    = string
   default = "chapter-2-2"
+}
+
+variable "project" {
+  type = string
 }
