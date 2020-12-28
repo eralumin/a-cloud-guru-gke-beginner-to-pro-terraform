@@ -18,5 +18,8 @@ variable "zone" {
 
 variable "services" {
   type    = list
-  default = ["container.googleapis.com"]
+  default = [
+    "container.googleapis.com",
+    "containerregistry.googleapis.com",
+  ]
 }
