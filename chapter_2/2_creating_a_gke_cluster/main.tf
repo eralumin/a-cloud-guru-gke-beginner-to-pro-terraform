@@ -55,7 +55,7 @@ resource "kubernetes_deployment" "myapp" {
       spec {
         container {
           image = "gcr.io/${var.project}/myapp"
-          name  = "example"
+          name  = "myapp"
 
           resources {
             limits {
@@ -73,5 +73,20 @@ resource "kubernetes_deployment" "myapp" {
   }
 }
 
+resource "kubernetes_service" "myapp" {
+  metadata {
+    name = "${var.lab_name}-service"
+  }
+  spec {
+    selector = {
+      test = "${var.lab_name}-myapp"
+    }
+    session_affinity = "ClientIP"
+    port {
+      port        = 80
+      target_port = 8888
+    }
+
+    type = "LoadBalancer"
   }
 }
