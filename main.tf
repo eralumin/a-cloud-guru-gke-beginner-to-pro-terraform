@@ -11,7 +11,13 @@ resource "google_project_service" "service" {
 }
 
 module "chapter_2_2_creating_a_gke_cluster" {
-  source = "./chapter_2/2_creating_a_gke_cluster"
-  region = var.region
+  source  = "./chapter_2/2_creating_a_gke_cluster"
+  region  = var.region
+  project = google_project.project.project_id
+}
+
+module "chapter_2_4_creating_pods" {
+  source  = "./chapter_2/4_creating_pods"
+  region  = var.region
   project = google_project.project.project_id
 }
