@@ -7,6 +7,10 @@ resource "google_container_cluster" "primary" {
   provisioner "local-exec" {
     command = "gcloud container clusters get-credentials ${google_container_cluster.primary.name} --region ${var.region} --project ${var.project}"
   }
+
+  node_config {
+    machine_type = "g1-small"
+  }
 }
 
 provider "kubernetes" {
