@@ -45,17 +45,6 @@ resource "kubernetes_deployment" "myapp" {
         container {
           image = "gcr.io/${var.project}/myapp"
           name  = "myapp"
-
-          resources {
-            limits {
-              cpu    = "0.5"
-              memory = "512Mi"
-            }
-            requests {
-              cpu    = "250m"
-              memory = "50Mi"
-            }
-          }
         }
       }
     }
@@ -108,17 +97,6 @@ resource "kubernetes_deployment" "nginx" {
         container {
           image = "nginx"
           name  = "nginx"
-
-          resources {
-            limits {
-              cpu    = "0.5"
-              memory = "512Mi"
-            }
-            requests {
-              cpu    = "250m"
-              memory = "50Mi"
-            }
-          }
         }
       }
     }
