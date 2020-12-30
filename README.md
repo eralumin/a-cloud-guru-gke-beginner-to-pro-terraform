@@ -11,11 +11,11 @@ Prequisites:
 2. Run `terraform apply`.
 3. Then replace `{uid_prefix}` by yours from `terraform.tfvars`.and run commands below:
 ```bash
-docker build -t gcr.io/{uid_prefix}-acg-gke/myapp ./myapp
-docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:blue ./myapp-blue
-docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:green ./myapp-green
-docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:bad ./myapp-bad
-docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:broken ./myapp-broken
+docker build -t gcr.io/{uid_prefix}-acg-gke/myapp ./docker_images/myapp
+docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:blue ./docker_images/myapp-blue
+docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:green ./docker_images/myapp-green
+docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:bad ./docker_images/myapp-bad
+docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:broken ./docker_images/myapp-broken
 
 docker push gcr.io/{uid_prefix}-acg-gke/myapp
 docker push gcr.io/{uid_prefix}-acg-gke/myapp:blue
