@@ -15,11 +15,13 @@ docker build -t gcr.io/{uid_prefix}-acg-gke/myapp ./myapp
 docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:blue ./myapp-blue
 docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:green ./myapp-green
 docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:bad ./myapp-bad
+docker build -t gcr.io/{uid_prefix}-acg-gke/myapp:broken ./myapp-broken
 
 docker push gcr.io/{uid_prefix}-acg-gke/myapp
 docker push gcr.io/{uid_prefix}-acg-gke/myapp:blue
 docker push gcr.io/{uid_prefix}-acg-gke/myapp:green
 docker push gcr.io/{uid_prefix}-acg-gke/myapp:bad
+docker push gcr.io/{uid_prefix}-acg-gke/myapp:broken
 ```
 4. Uncomments modules on `main.tf`.
 5. Run `terraform apply`.
