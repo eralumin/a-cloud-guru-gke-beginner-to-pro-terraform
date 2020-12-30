@@ -33,3 +33,9 @@ module "chapter_2_7_monitoring_logging_and_debugging" {
   region  = var.region2
   project = google_project.project.project_id
 }
+
+module "chapter_3_1_stateless_application_example" {
+  source  = "./chapter_3/1_stateless_application_example"
+  region  = var.region3
+  project = google_project.project.project_id
+}
