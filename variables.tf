@@ -16,6 +16,16 @@ variable "zone" {
   default = "us-central1-c"
 }
 
+variable "region2" {
+  type    = string
+  default = "us-east1"
+}
+
+variable "zone2" {
+  type    = string
+  default = "us-east1-c"
+}
+
 variable "services" {
   type    = list
   default = [

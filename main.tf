@@ -21,3 +21,9 @@ module "chapter_2_4_creating_pods" {
   region  = var.region
   project = google_project.project.project_id
 }
+
+module "chapter_2_6_deployments_and_services" {
+  source  = "./chapter_2/6_deployments_and_services"
+  region  = var.region2
+  project = google_project.project.project_id
+}
