@@ -6,6 +6,8 @@ resource "google_sql_database_instance" "master" {
   settings {
     tier = "db-f1-micro"
   }
+
+  deletion_protection  = "true"
 }
 
 resource "google_sql_database" "database" {

@@ -45,3 +45,9 @@ module "chapter_3_4_maintaining_a_service_with_unhealthy_pods" {
   region  = var.region3
   project = google_project.project.project_id
 }
+
+module "chapter_3_6_volumes_and_persistent_storage" {
+  source  = "./chapter_3/6_volumes_and_persistent_storage"
+  region  = var.region4
+  project = google_project.project.project_id
+}
