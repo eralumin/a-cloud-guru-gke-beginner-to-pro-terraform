@@ -39,3 +39,9 @@ module "chapter_3_1_stateless_application_example" {
   region  = var.region3
   project = google_project.project.project_id
 }
+
+module "chapter_3_4_maintaining_a_service_with_unhealthy_pods" {
+  source  = "./chapter_3/4_maintaining_a_service_with_unhealthy_pods"
+  region  = var.region3
+  project = google_project.project.project_id
+}

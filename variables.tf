@@ -36,5 +36,7 @@ variable "services" {
   default = [
     "container.googleapis.com",
     "containerregistry.googleapis.com",
+    "sqladmin.googleapis.com",
+    "sql-component.googleapis.com",
   ]
 }
