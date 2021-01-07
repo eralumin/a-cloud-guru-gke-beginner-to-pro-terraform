@@ -51,3 +51,9 @@ module "chapter_3_6_volumes_and_persistent_storage" {
   region  = var.region4
   project = google_project.project.project_id
 }
+
+module "chapter_3_9_deployment_patterns" {
+  source  = "./chapter_3/9_deployment_patterns"
+  region  = var.region4
+  project = google_project.project.project_id
+}
