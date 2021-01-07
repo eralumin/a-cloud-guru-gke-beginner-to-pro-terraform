@@ -31,6 +31,11 @@ variable "region4" {
   default = "us-west1"
 }
 
+variable "region5" {
+  type    = string
+  default = "us-west2"
+}
+
 variable "zone2" {
   type    = string
   default = "us-east1-c"

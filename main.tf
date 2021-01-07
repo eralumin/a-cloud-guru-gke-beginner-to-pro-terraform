@@ -57,3 +57,9 @@ module "chapter_3_9_deployment_patterns" {
   region  = var.region4
   project = google_project.project.project_id
 }
+
+module "chapter_3_11_autoscaling_all_the_things" {
+  source  = "./chapter_3/11_autoscaling_all_the_things"
+  region  = var.region5
+  project = google_project.project.project_id
+}
