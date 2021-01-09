@@ -16,6 +16,11 @@ variable "zone" {
   default = "us-central1-c"
 }
 
+variable "zone2" {
+  type    = string
+  default = "us-east1-c"
+}
+
 variable "region2" {
   type    = string
   default = "us-east1"
@@ -34,11 +39,6 @@ variable "region4" {
 variable "region5" {
   type    = string
   default = "us-west2"
-}
-
-variable "zone2" {
-  type    = string
-  default = "us-east1-c"
 }
 
 variable "services" {

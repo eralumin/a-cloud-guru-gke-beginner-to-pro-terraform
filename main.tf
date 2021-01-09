@@ -10,6 +10,8 @@ resource "google_project_service" "service" {
   service  = each.value
 }
 
+data "google_client_openid_userinfo" "me" {}
+
 module "chapter_2_2_creating_a_gke_cluster" {
   source  = "./chapter_2/2_creating_a_gke_cluster"
   region  = var.region
@@ -62,4 +64,11 @@ module "chapter_3_11_autoscaling_all_the_things" {
   source  = "./chapter_3/11_autoscaling_all_the_things"
   region  = var.region5
   project = google_project.project.project_id
+}
+
+module "chapter_4_4_routing_traffic_with_ingress_controllers" {
+  source  = "./chapter_4/4_routing_traffic_with_ingress_controllers"
+  region  = var.region5
+  project = google_project.project.project_id
+  email = data.google_client_openid_userinfo.me.email
 }
