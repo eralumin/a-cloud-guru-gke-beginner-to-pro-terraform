@@ -18,5 +18,10 @@ for tag in $(ls docker_images/myapp); do
     docker push gcr.io/${uid_prefix}-acg-gke/myapp:${tag}
 done
 ```
-4. Uncomments modules on `main.tf`.
-5. Run `terraform apply`.
+5. Download kubemci:
+```bash
+wget https://storage.googleapis.com/kubemci-release/release/latest/bin/linux/amd64/kubemci
+chmod a+x ./kubemci
+```
+5. Uncomments modules on `main.tf`.
+6. Run `terraform apply`.
